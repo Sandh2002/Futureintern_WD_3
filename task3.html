@@ -1,0 +1,119 @@
+<script src="task3.js"></script>
+<style>
+    /* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #020a0c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container Styling */
+.container {
+    background: #57b6f5;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Title Styling */
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Converter Styling */
+.converter {
+    margin-bottom: 20px;
+}
+
+.converter input, .converter select, .converter button {
+    padding: 10px;
+    margin: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.converter button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.converter button:hover {
+    background-color: #e8491d;
+}
+
+/* Results Styling */
+.results {
+    display: flex;
+    justify-content: space-around;
+}
+
+.result-item h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+.result-item p {
+    font-size: 20px;
+    color: #666;
+}
+
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Temperature Converter</h1>
+
+        <div class="converter">
+            <input type="number" id="inputTemperature" placeholder="Enter temperature">
+            <select id="inputUnit">
+                <option value="Celsius">Celsius</option>
+                <option value="Fahrenheit">Fahrenheit</option>
+                <option value="Kelvin">Kelvin</option>
+            </select>
+            <button onclick="convertTemperature()">Convert</button>
+        </div>
+
+        <div class="results">
+            <div class="result-item">
+                <h3>Celsius:</h3>
+                <p id="celsiusResult">-</p>
+            </div>
+            <div class="result-item">
+                <h3>Fahrenheit:</h3>
+                <p id="fahrenheitResult">-</p>
+            </div>
+            <div class="result-item">
+                <h3>Kelvin:</h3>
+                <p id="kelvinResult">-</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
